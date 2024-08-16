@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 
 export default function About() {
   return (
-    <div className="flex flex-col w-2/3 lg:w-1/3 gap-2 my-10 text-justify max-h-[88vh] pr-5 overflow-scroll overflow-x-hidden">
+    <div className="flex flex-col w-5/6 lg:w-1/3 gap-2 my-10 text-justify max-h-[88vh] pr-5 overflow-scroll overflow-x-hidden">
       <h2 className="text-2xl text-neutral-300 font-semibold">About</h2>
       <p className="text-neutral-400">
         The source of these answers is the very resourceful{" "}

@@ -49,6 +49,7 @@ export default function DetailsForm({
         labelText="Improve grammar"
         options={["Yes", "No"]}
         ref={yesRef}
+        defaultCheckedIndex="1"
       />
       <button
         type="submit"

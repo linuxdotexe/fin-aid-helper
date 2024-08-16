@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
 const RadioGroup = forwardRef(function RadioGroup(
-  { name, options, labelText },
+  { name, options, labelText, defaultCheckedIndex },
   ref
 ) {
   return (
@@ -19,7 +19,7 @@ const RadioGroup = forwardRef(function RadioGroup(
             className="peer mt-[0.5px] appearance-none w-4 h-4 border-2 border-sky-300/60 rounded-full
             focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-2 focus-visible:ring-sky-300"
             value={option}
-            defaultChecked={index === 1}
+            defaultChecked={index == defaultCheckedIndex}
             ref={index === 0 ? ref : null}
           />
           <span className="pointer-events-none w-2 h-2 peer-checked:bg-sky-300 rounded-full ml-1 absolute" />

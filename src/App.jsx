@@ -2,6 +2,7 @@ import { useState } from "react";
 import DetailsForm from "./components/DetailsForm";
 import Display from "./components/Display";
 import About from "./components/About";
+import RadioGroup from "./components/RadioGroup";
 
 function App() {
   const [details, setDetails] = useState({
@@ -32,19 +33,28 @@ function App() {
       };
     });
   }
+  // * future plans - ADS
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-20 justify-center items-center min-h-screen gap-10">
-      <div className="flex flex-col justify-center">
-        <h1 className="text-4xl font-bold mb-4 border-b-2 border-sky-300 text-center py-4 px-1">
-          Financial Aid Helper
-        </h1>
-        <DetailsForm
-          {...details}
-          onChange={handleChange}
-        />
+    <>
+      {/* <RadioGroup
+        name="ads"
+        labelText="Enable Ads?"
+        options={["Yes", "No"]}
+        defaultCheckedIndex="0"
+      /> */}
+      <div className="flex flex-col lg:flex-row lg:gap-20 justify-center items-center min-h-screen gap-10">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-4xl font-bold mb-4 border-b-2 border-sky-300 text-center py-4 px-1">
+            Financial Aid Helper
+          </h1>
+          <DetailsForm
+            {...details}
+            onChange={handleChange}
+          />
+        </div>
+        {details.country === "Gont" ? <About /> : <Display {...details} />}
       </div>
-      {details.country === "Gont" ? <About /> : <Display {...details} />}
-    </div>
+    </>
   );
 }
 

@@ -39,7 +39,7 @@ export default function Display({ name, country, course, skills, grammar }) {
   );
 
   return (
-    <div className="flex flex-col w-2/3 lg:w-1/3 gap-2 my-10 text-justify max-h-[88vh] overflow-x-hidden overflow-scroll pr-5">
+    <div className="flex flex-col w-5/6 lg:w-1/3 gap-2 my-10 text-justify max-h-[88vh] overflow-x-hidden overflow-scroll pr-5">
       <h2 className="text-xl text-neutral-300 font-semibold">
         Reason you applied for aid
       </h2>
