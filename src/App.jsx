@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DetailsForm from "./components/DetailsForm";
 import Display from "./components/Display";
+import About from "./components/About";
 
 function App() {
   const [details, setDetails] = useState({
@@ -42,7 +43,7 @@ function App() {
           onChange={handleChange}
         />
       </div>
-      {details.country === "Gont" ? "" : <Display {...details} />}
+      {details.country === "Gont" ? <About /> : <Display {...details} />}
     </div>
   );
 }

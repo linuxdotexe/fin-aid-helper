@@ -20,24 +20,28 @@ export default function DetailsForm({
         labelText="Your Name"
         inputPlaceholder={name}
         type="text"
+        name="name"
         ref={nameRef}
       />
       <Input
         labelText="Country"
         inputPlaceholder={country}
         type="text"
+        name="country"
         ref={countryRef}
       />
       <Input
         labelText="Course Name"
         inputPlaceholder={course}
         type="text"
+        name="course name"
         ref={courseRef}
       />
       <Input
         labelText="Skill(s) you get from this course"
         inputPlaceholder={skills}
         type="text"
+        name="skills"
         ref={skillsRef}
       />
       <RadioGroup

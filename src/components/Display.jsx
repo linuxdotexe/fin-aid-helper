@@ -32,7 +32,7 @@ export default function Display({ name, country, course, skills, grammar }) {
     skillsArray[1] || skillsArray[0]
   );
   howAnswer = howAnswer.replace("'machine learning'", skillsArray[0]);
-  howAnswer = howAnswer.replace("'Programming'", skillsArray[0]);
+  howAnswer = howAnswer.replace("'Programming'", capitalize(skillsArray[0]));
   howAnswer = howAnswer.replace(
     "'machine learning and deep learning'",
     skillsArray[2] || skillsArray[1] || skillsArray[0]
@@ -41,12 +41,11 @@ export default function Display({ name, country, course, skills, grammar }) {
   return (
     <div className="flex flex-col w-2/3 lg:w-1/3 gap-2 my-10 text-justify max-h-[88vh] overflow-x-hidden overflow-scroll pr-5">
       <h2 className="text-xl text-neutral-300 font-semibold">
-        Why are you applying for Financial Aid? (150 words minimum required)
+        Reason you applied for aid
       </h2>
       <Answer>{whyAnswer}</Answer>
       <h2 className="text-xl text-neutral-300 font-semibold">
-        How will taking this course help you achieve your career goals? (150
-        words minimum required)
+        How will your selected course help with your goals?
       </h2>
       <Answer>{howAnswer}</Answer>
       <h2 className="text-xl text-neutral-300 font-semibold">

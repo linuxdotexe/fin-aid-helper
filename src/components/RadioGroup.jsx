@@ -6,7 +6,7 @@ const RadioGroup = forwardRef(function RadioGroup(
 ) {
   return (
     <div>
-      <label className="text-sm text-neutral-300">{labelText}</label>
+      <p className="text-sm text-neutral-300">{labelText}</p>
       {options.map((option, index) => (
         <label
           key={option}
