@@ -13,6 +13,7 @@ export default function DetailsForm({
   const countryRef = useRef();
   const courseRef = useRef();
   const skillsRef = useRef();
+  const yesRef = useRef();
   return (
     <div className="flex flex-col gap-2">
       <Input
@@ -43,6 +44,7 @@ export default function DetailsForm({
         name="grammar"
         labelText="Improve grammar"
         options={["Yes", "No"]}
+        ref={yesRef}
       />
       <button
         type="submit"
@@ -52,7 +54,8 @@ export default function DetailsForm({
             nameRef.current.value,
             countryRef.current.value,
             courseRef.current.value,
-            skillsRef.current.value
+            skillsRef.current.value,
+            yesRef.current.checked
           )
         }
       >
