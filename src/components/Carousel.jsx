@@ -7,7 +7,7 @@ export default function Carousel() {
       ? setImageNum((prev) => (prev += 1))
       : setImageNum((prev) => (prev -= 1));
   }
-  let imageSrc = `src/assets/carousel/${imageNum}.png`;
+  let imageSrc = `/carousel/${imageNum}.png`;
   return (
     <div className="mt-1">
       <a
