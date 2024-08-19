@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 export default function Carousel() {
   const [imageNum, setImageNum] = useState(1);
@@ -21,24 +22,22 @@ export default function Carousel() {
         ></img>
       </a>
       <div className="flex justify-between mt-4">
-        <button
+        <Button
           disabled={imageNum < 2}
           onClick={() => {
             handleClick(false);
           }}
-          className="border-2 border-neutral-400 enabled:hover:bg-sky-300 enabled:hover:text-black px-4 py-2 rounded-full text-neutral-300 font-bold enabled:hover:border-sky-900 disabled:opacity-20 disabled:cursor-not-allowed"
         >
           Prev
-        </button>
-        <button
+        </Button>
+        <Button
           disabled={imageNum > 8}
           onClick={() => {
             handleClick(true);
           }}
-          className="border-2 border-neutral-400 enabled:hover:bg-sky-300 enabled:hover:text-black px-4 py-2 rounded-full text-neutral-300 font-bold enabled:hover:border-sky-900 disabled:opacity-20 disabled:cursor-not-allowed"
         >
           Next
-        </button>
+        </Button>
       </div>
     </div>
   );

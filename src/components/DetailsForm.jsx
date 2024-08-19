@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Input from "./Input";
 import RadioGroup from "./RadioGroup";
+import Button from "./Button";
 
 export default function DetailsForm({
   name,
@@ -51,9 +52,9 @@ export default function DetailsForm({
         ref={yesRef}
         defaultCheckedIndex="1"
       />
-      <button
+      <Button
+        className="m-auto"
         type="submit"
-        className="border-2 border-neutral-400 enabled:hover:bg-sky-300 enabled:hover:text-black w-fit px-4 py-2 rounded-full text-neutral-300 font-bold m-auto enabled:hover:border-sky-900 disabled:opacity-20"
         onClick={() =>
           onChange(
             nameRef.current.value,
@@ -65,7 +66,7 @@ export default function DetailsForm({
         }
       >
         Submit
-      </button>
+      </Button>
     </div>
   );
 }
